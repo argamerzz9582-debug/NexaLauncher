@@ -70,6 +70,10 @@ jobs:
             grep -E 'error:|Execution failed for task|FAILURE: Build failed|Server returned HTTP response code|Received status code|Read timed out|Connection timed out|UnknownHostException' /tmp/nexa-gradle-build.log | head -20 | while IFS= read -r line; do
               echo "::error::$line"
             done
+            # Include the failure reason (the Gradle task itself downloads public assets).
+            sed -n '/^\* What went wrong:/,/^\* Try:/p' /tmp/nexa-gradle-build.log | head -8 | while IFS= read -r line; do
+              echo "::error::${line//%/%25}"
+            done
             exit "$build_status"
           fi
           mv app_mojo/build/outputs/apk/full/debug/app_mojo-full-debug.apk out/app-debug-full.apk

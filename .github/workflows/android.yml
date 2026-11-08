@@ -67,7 +67,7 @@ jobs:
           set -e
           if [ "$build_status" -ne 0 ]; then
             # Surface compiler diagnostics when Actions log downloads are unavailable.
-            grep -E 'error:|Execution failed for task|FAILURE: Build failed' /tmp/nexa-gradle-build.log | head -20 | while IFS= read -r line; do
+            grep -E 'error:|Execution failed for task|FAILURE: Build failed|Server returned HTTP response code|Received status code|Read timed out|Connection timed out|UnknownHostException' /tmp/nexa-gradle-build.log | head -20 | while IFS= read -r line; do
               echo "::error::$line"
             done
             exit "$build_status"

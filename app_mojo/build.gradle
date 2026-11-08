@@ -226,6 +226,7 @@ class AssetTaskRegistrar {
             src downloadUrl
             dest downloadTarget
             overwrite false
+            retries 5
         }
 
         def unzipTask = project.tasks.register("unzip${dependencySuffix}", Copy) {
@@ -274,6 +275,7 @@ class AssetTaskRegistrar {
             src String.format(jarUrl, jarProject, dependency, version, suffix)
             dest targetDir
             overwrite false
+            retries 5
             doLast {
                 if(!it.didWork) return
                 writeVersion targetDir

@@ -32,6 +32,7 @@ import git.artdeell.mojo.extra.ExtraCore;
 import git.artdeell.mojo.instances.Instance;
 import git.artdeell.mojo.instances.Instances;
 import git.artdeell.mojo.prefs.LauncherPreferences;
+import git.artdeell.mojo.theme.NexaTheme;
 import git.artdeell.mojo.utils.FileUtils;
 
 import java.io.File;
@@ -109,6 +110,7 @@ public class MainMenuFragment extends Fragment {
         ExtraCore.setValue(ExtraConstants.REFRESH_ACCOUNT_SPINNER, true);
         View view = getView();
         if (view != null) {
+            NexaTheme.apply(requireContext(), view);
             TextView ram = view.findViewById(R.id.nexa_ram);
             ram.setText(getString(R.string.nexa_ram_allocation, LauncherPreferences.PREF_RAM_ALLOCATION));
         }

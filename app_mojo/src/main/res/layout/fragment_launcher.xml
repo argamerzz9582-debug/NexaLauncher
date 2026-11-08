@@ -3,6 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_menu_main" android:layout_width="match_parent"
     android:layout_height="match_parent" android:background="@drawable/nexa_background">
+    <ImageView android:id="@+id/nexa_wallpaper" android:layout_width="0dp" android:layout_height="0dp"
+        android:scaleType="centerCrop" android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+    <View android:id="@+id/nexa_wallpaper_dim" android:layout_width="0dp" android:layout_height="0dp"
+        android:background="#B3080D18" android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
     <ScrollView android:layout_width="0dp" android:layout_height="0dp"
         android:fillViewport="false" android:clipToPadding="false"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"

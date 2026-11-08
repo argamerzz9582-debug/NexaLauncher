@@ -15,6 +15,21 @@
     <string name="nexa_edit_instance">Edit selected instance</string>
     <string name="nexa_ram_allocation">Allocated memory: %1$d MB</string>
 
+    <string name="nexa_appearance_title">Appearance</string>
+    <string name="nexa_appearance_summary">Choose a launcher background or wallpaper</string>
+    <string name="nexa_theme_preset">Background preset</string>
+    <string name="nexa_wallpaper_select">Choose wallpaper</string>
+    <string name="nexa_wallpaper_summary">Custom images override the selected background preset.</string>
+    <string name="nexa_wallpaper_reset">Remove custom wallpaper</string>
+    <string name="nexa_wallpaper_saved">Wallpaper saved</string>
+    <string name="nexa_wallpaper_error">Could not save access to this image. Please choose another.</string>
+    <string-array name="nexa_theme_names">
+        <item>NEXA Midnight</item><item>Arctic Blue</item><item>Cyber Cyan</item><item>Deep Space</item><item>Silver Frost</item>
+    </string-array>
+    <string-array name="nexa_theme_values" translatable="false">
+        <item>midnight</item><item>arctic</item><item>cyber</item><item>space</item><item>silver</item>
+    </string-array>
+
     <!-- Action bar part -->
 
     <!-- Languages list part -->

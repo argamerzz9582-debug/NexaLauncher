@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <git.artdeell.mojo.prefs.BackButtonPreference />
+    <PreferenceCategory android:title="@string/nexa_appearance_title">
+        <ListPreference android:key="nexa_theme_preset" android:title="@string/nexa_theme_preset"
+            android:defaultValue="midnight" android:entries="@array/nexa_theme_names"
+            android:entryValues="@array/nexa_theme_values" app:useSimpleSummaryProvider="true" />
+        <Preference android:key="nexa_select_wallpaper" android:title="@string/nexa_wallpaper_select"
+            android:summary="@string/nexa_wallpaper_summary" />
+        <Preference android:key="nexa_reset_wallpaper" android:title="@string/nexa_wallpaper_reset" />
+    </PreferenceCategory>
+</PreferenceScreen>

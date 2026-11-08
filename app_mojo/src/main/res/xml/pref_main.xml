@@ -14,6 +14,13 @@
         >
 
         <Preference
+            android:key="nexa_appearance_screen"
+            android:title="@string/nexa_appearance_title"
+            android:summary="@string/nexa_appearance_summary"
+            android:fragment="git.artdeell.mojo.prefs.screens.NexaAppearanceFragment"
+            android:icon="@drawable/ic_px_image" />
+
+        <Preference
             android:key="video_screen_setting"
             android:title="@string/preference_video_title"
             android:summary="@string/preference_video_description"

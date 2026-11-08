@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp"
+    android:paddingTop="16dp" android:paddingBottom="16dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="16dp" android:background="@drawable/nexa_card">
+        <ImageView android:layout_width="76dp" android:layout_height="76dp"
+            android:src="@drawable/nexa_logo" android:scaleType="fitCenter"
+            android:contentDescription="@null" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:layout_marginStart="16dp" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/nexa_dashboard_eyebrow" android:textColor="#73E5F2"
+                android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.1" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:text="@string/app_short_name"
+                android:textColor="@color/primary_text" android:textSize="23sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:text="@string/nexa_dashboard_subtitle"
+                android:textColor="@color/secondary_text" android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="24dp" android:text="@string/nexa_quick_access"
+        android:textColor="@color/primary_text" android:textSize="17sp" android:textStyle="bold" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="3dp" android:text="@string/nexa_quick_access_subtitle"
+        android:textColor="@color/secondary_text" android:textSize="12sp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:orientation="horizontal">
+        <Button android:id="@+id/nexa_instances" style="@style/NexaShortcut"
+            android:layout_width="0dp" android:layout_weight="1" android:text="@string/nexa_instances" />
+        <Button android:id="@+id/nexa_accounts" style="@style/NexaShortcut"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp"
+            android:text="@string/nexa_accounts" />
+        <Button android:id="@+id/nexa_settings" style="@style/NexaShortcut"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="8dp"
+            android:text="@string/nexa_settings" />
+    </LinearLayout>
+    <TextView android:id="@+id/nexa_ram" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="12dp" android:padding="14dp"
+        android:background="@drawable/nexa_card" android:textColor="@color/primary_text"
+        android:textSize="13sp" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="24dp" android:layout_marginBottom="8dp"
+        android:text="@string/nexa_tools" android:textColor="@color/primary_text"
+        android:textSize="17sp" android:textStyle="bold" />
+    <com.kdt.mcgui.LauncherMenuButton android:id="@+id/custom_control_button"
+        style="@style/LauncherMenuButton.Universal" android:layout_width="match_parent"
+        android:drawableStart="@drawable/ic_px_gamepad" android:text="@string/mcl_option_customcontrol" />
+    <com.kdt.mcgui.LauncherMenuButton android:id="@+id/install_jar_button"
+        style="@style/LauncherMenuButton.Universal" android:layout_width="match_parent"
+        android:drawableStart="@drawable/ic_px_java_run" android:text="@string/main_install_jar_file" />
+    <com.kdt.mcgui.LauncherMenuButton android:id="@+id/open_files_button"
+        style="@style/LauncherMenuButton.Universal" android:layout_width="match_parent"
+        android:drawableStart="@drawable/ic_px_folder" android:text="@string/mcl_button_open_directory" />
+    <com.kdt.mcgui.LauncherMenuButton android:id="@+id/share_logs_button"
+        style="@style/LauncherMenuButton.Universal" android:layout_width="match_parent"
+        android:drawableStart="@drawable/ic_px_sharelog" android:text="@string/main_share_logs" />
+    <com.kdt.mcgui.LauncherMenuButton android:id="@+id/news_button"
+        style="@style/LauncherMenuButton.Universal" android:layout_width="match_parent"
+        android:drawableStart="@drawable/ic_px_book" android:text="@string/mcl_tab_wiki" />
+    <com.kdt.mcgui.LauncherMenuButton android:id="@+id/social_media_button"
+        style="@style/LauncherMenuButton.Universal" android:layout_width="match_parent"
+        android:drawableStart="@drawable/ic_social_media" android:text="@string/mcl_button_social_media" />
+</LinearLayout>

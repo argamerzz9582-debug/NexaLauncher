@@ -61,6 +61,15 @@
         <item name="android:layout_height">@dimen/_66sdp</item>
     </style>
 
+    <style name="NexaShortcut" parent="Widget.AppCompat.Button">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/nexa_glass_button</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
     <style name="ThickDivider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/_1sdp</item>

@@ -3,6 +3,18 @@
     <!-- App name part -->
     <string name="app_short_name" translatable="false">NEXA Launcher</string>
 
+    <string name="nexa_dashboard_eyebrow">YOUR COMMAND CENTER</string>
+    <string name="nexa_dashboard_subtitle">Your worlds, ready when you are.</string>
+    <string name="nexa_quick_access">Quick access</string>
+    <string name="nexa_quick_access_subtitle">Everything you need to get playing.</string>
+    <string name="nexa_instances">Instances</string>
+    <string name="nexa_accounts">Accounts</string>
+    <string name="nexa_settings">Settings</string>
+    <string name="nexa_tools">Launcher tools</string>
+    <string name="nexa_selected_instance">SELECTED INSTANCE</string>
+    <string name="nexa_edit_instance">Edit selected instance</string>
+    <string name="nexa_ram_allocation">Allocated memory: %1$d MB</string>
+
     <!-- Action bar part -->
 
     <!-- Languages list part -->

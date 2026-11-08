@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
@@ -28,6 +31,7 @@ import git.artdeell.mojo.extra.ExtraConstants;
 import git.artdeell.mojo.extra.ExtraCore;
 import git.artdeell.mojo.instances.Instance;
 import git.artdeell.mojo.instances.Instances;
+import git.artdeell.mojo.prefs.LauncherPreferences;
 import git.artdeell.mojo.utils.FileUtils;
 
 import java.io.File;
@@ -58,6 +62,13 @@ public class MainMenuFragment extends Fragment {
         ImageButton mEditProfileButton = view.findViewById(R.id.edit_profile_button);
         Button mPlayButton = view.findViewById(R.id.play_button);
         mVersionSpinner = view.findViewById(R.id.mc_version_spinner);
+        mPlayButton.setBackgroundResource(R.drawable.nexa_play_button);
+        mPlayButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.background_app));
+        view.findViewById(R.id.nexa_instances).setOnClickListener(v -> mVersionSpinner.performClick());
+        view.findViewById(R.id.nexa_accounts).setOnClickListener(v ->
+                requireActivity().findViewById(R.id.account_spinner).performClick());
+        view.findViewById(R.id.nexa_settings).setOnClickListener(v ->
+                requireActivity().findViewById(R.id.setting_button).performClick());
 
         mNewsButton.setOnClickListener(v -> Tools.openURL(requireActivity(), Tools.URL_HOME));
         mDiscordButton.setOnClickListener(v -> Tools.openURL(requireActivity(), getString(R.string.social_media_invite)));
@@ -96,6 +107,11 @@ public class MainMenuFragment extends Fragment {
     public void onResume() {
         super.onResume();
         ExtraCore.setValue(ExtraConstants.REFRESH_ACCOUNT_SPINNER, true);
+        View view = getView();
+        if (view != null) {
+            TextView ram = view.findViewById(R.id.nexa_ram);
+            ram.setText(getString(R.string.nexa_ram_allocation, LauncherPreferences.PREF_RAM_ALLOCATION));
+        }
     }
 
     private void runInstallerWithConfirmation() {
